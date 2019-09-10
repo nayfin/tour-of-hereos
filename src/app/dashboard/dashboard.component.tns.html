@@ -1,21 +1,9 @@
 <ActionBar title="Top Heroes"></ActionBar>
-<StackLayout>
-
-  <Label *ngFor="let hero of heroes" [text]="hero.name" textWrap="true"></Label>
-  
-</StackLayout>
-
-<!--
-Original Web template:
-
-<h3>Top Heroes</h3>
-<div class="grid grid-pad">
-  <div *ngFor="let hero of heroes" (click)="gotoDetail(hero)" class="col-1-4">
-    <div class="module hero">
-      <h4>{{hero.name}}</h4>
-    </div>
-  </div>
-</div>
-<my-hero-search></my-hero-search>
-
--->
+<FlexboxLayout class="hero-container" flexDirection="column" flexGrow="2">
+  <Button 
+    flexGrow="1"
+    *ngFor="let hero of heroes" 
+    (tap)="gotoDetail(hero )" 
+    [text]="hero.name">
+  </Button>
+</FlexboxLayout>

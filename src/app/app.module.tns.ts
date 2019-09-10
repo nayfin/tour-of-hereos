@@ -13,11 +13,13 @@ import { DashboardComponent } from '@src/app/dashboard/dashboard.component';
 import { NativeScriptHttpClientModule } from 'nativescript-angular/http-client';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from '@src/app/in-memory-data.service';
+import { HeroDetailComponent } from '@src/app/hero-detail/hero-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
+    HeroDetailComponent,
   ],
   imports: [
     NativeScriptModule,

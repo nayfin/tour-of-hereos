@@ -3,12 +3,3 @@ Add your NativeScript specific styles here.
 To learn more about styling in NativeScript see:
 https://docs.nativescript.org/angular/ui/styling
 */
-Button {
-    background: green;
-    color: white;
-    border-color: orange;
-    border-width: 13px;
-}
-.hero-container {
-    height: 100%;
-}
