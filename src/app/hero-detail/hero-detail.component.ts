@@ -1,7 +1,9 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Hero } from '../hero';
-import { HeroService } from '../hero.service';
+
+import { Hero } from '@src/app/hero';
+import { HeroService } from '@src/app/hero.service';
+import { takePhoto } from '@src/app/hero-detail/photo-helper';
 
 @Component({
   selector: 'my-hero-detail',
@@ -11,6 +13,7 @@ import { HeroService } from '../hero.service';
 export class HeroDetailComponent implements OnInit {
   @Input() hero: Hero;
   @Output() close = new EventEmitter();
+  heroImagePath = '';
   error: any;
   navigated = false; // true if navigated here
 
@@ -44,5 +47,9 @@ export class HeroDetailComponent implements OnInit {
     if (this.navigated) {
       window.history.back();
     }
+  }
+  
+  handleTakePhoto() {
+    takePhoto();
   }
 }
